@@ -17,10 +17,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'yarn'
           
       - name: Install dependencies
-        run: yarn install
+        run: npm install
         
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -49,11 +48,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'yarn'
           
       - name: Install dependencies
         run: |
-          yarn install
+          npm install
           cd ios && pod install
           
       - name: Build iOS
